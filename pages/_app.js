@@ -1,14 +1,4 @@
-import { ChakraBaseProvider } from "@chakra-ui/react";
-import Layout from '../components/layouts/main';
-
-const Website = ({Component,pageProps,router})=>{
-    return (
-        <ChakraBaseProvider>
-             <Layout router={router}>
-                <Component {...pageProps} key={router.route}/>
-             </Layout>
-        </ChakraBaseProvider>
-    );
-} 
-
-export default Website
+import '../styles/globals.css'
+export default function Website({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}

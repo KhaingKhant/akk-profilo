@@ -1,44 +1,36 @@
-# Aung Khaing Khant — Portfolio
+# Kettles — Aung Khaing Khant
 
-A personal portfolio project built with **Next.js, React, Chakra UI, and Framer Motion**. It is intended as a simple home for presenting my background as a developer, designer, and digital creator.
+A single-page engineering portfolio built with Next.js and React, with a dark visual direction inspired by Raycast and the supplied Kettles identity.
 
-## Purpose
+## Development
 
-This project gives me a lightweight portfolio codebase that I can extend with selected projects, work experience, writing, and contact information. It also serves as a frontend playground for experimenting with component-based UI and motion.
-
-## Tech stack
-
-- Next.js 13
-- React 18
-- Chakra UI
-- Framer Motion
-- Emotion
-- ESLint
-- Prettier
-
-## Current status
-
-The current homepage is intentionally minimal and includes an introduction and personal profile heading. I plan to expand it with stronger project case studies and a clearer professional profile.
-
-## Local development
-
-```bash
-git clone https://github.com/KhaingKhant/akk-profilo.git
-cd akk-profilo
+```sh
 npm install
 npm run dev
 ```
 
-Then open the local Next.js development server in your browser.
+## Production preview
 
-## Planned improvements
+```sh
+npm run build
+npx next start -H 127.0.0.1 -p 4173
+```
 
-- Add selected engineering projects with concise case studies
-- Add work experience and technical skills
-- Improve responsive layout and visual hierarchy
-- Add contact and social links
-- Add deployment and live-demo information
+## Content and design
 
-## Repository
+- `pages/index.js`: introduction, selected work, capabilities, career history, and contact links.
+- `styles/globals.css`: responsive styling, subtle entrance and hover motion, and reduced-motion support.
+- The portrait is excluded from Git. Optionally set `NEXT_PUBLIC_PORTRAIT_URL` at build time to a separately hosted image; without it, the hero displays the AKK monogram. Any image shown on a public website is publicly accessible.
+- `public/assets/akk-monogram.svg`: custom off-white AKK signature monogram inspired by the hand-drawn initials on Dan Koe’s website; used in the header and footer.
+- `public/fonts/`: locally hosted Inter variable font and its license.
 
-GitHub: https://github.com/KhaingKhant/akk-profilo
+Career dates, role descriptions, social URLs, and the approximately 10-to-2-second search improvement use the newer Senior Full-Stack Engineer résumé. The older 001 résumé was treated as background only. Project visuals are illustrative compositions, not product screenshots. Typography uses locally hosted Inter with larger body text and brighter secondary colors inspired by Raycast's readable hierarchy.
+
+Interactions include same-page navigation, expandable project details, email copying with a fallback message, mailto links, and GitHub/LinkedIn links. No contact form backend is required.
+
+## Validation
+
+```sh
+npm run lint
+npm run build
+```
