@@ -3,3 +3,5 @@ node_modules
 dist
 .vercel
 .env
+public/assets/portrait.jpg
+.env.local
